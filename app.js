@@ -20,6 +20,7 @@ buttons.forEach(function(btn) {
     });
 });
 
-Telegram.WebApp.onEvent("mainButtonClicked", function () {
+// ИСПРАВЛЕНО: надежный обработчик нажатия на главную кнопку
+tg.MainButton.onClick(function () {
     tg.sendData(item);
 });
